@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casio 991 CW Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="calculator-container">
+        <div class="calculator">
+            <div class="brand">CASIO</div>
+            <div class="model">fx-991 CW</div>
+            
+            <div class="display">
+                <div class="memory-indicator" id="memoryIndicator"></div>
+                <div class="angle-mode" id="angleMode">DEG</div>
+                <div class="main-display" id="mainDisplay">0</div>
+                <div class="secondary-display" id="secondaryDisplay"></div>
+            </div>
+
+            <div class="keypad">
+                <!-- Row 1: Mode and Setup -->
+                <button class="key mode-key" data-action="mode">MODE</button>
+                <button class="key setup-key" data-action="setup">SETUP</button>
+                <button class="key clear-key" data-action="clear">AC</button>
+                <button class="key delete-key" data-action="delete">DEL</button>
+
+                <!-- Row 2: Memory and Functions -->
+                <button class="key memory-key" data-action="memory">M</button>
+                <button class="key function-key" data-action="function">FUNCTION</button>
+                <button class="key shift-key" data-action="shift">SHIFT</button>
+                <button class="key alpha-key" data-action="alpha">ALPHA</button>
+
+                <!-- Row 3: Scientific Functions -->
+                <button class="key scientific-key" data-action="sin">sin</button>
+                <button class="key scientific-key" data-action="cos">cos</button>
+                <button class="key scientific-key" data-action="tan">tan</button>
+                <button class="key scientific-key" data-action="log">log</button>
+
+                <!-- Row 4: More Scientific Functions -->
+                <button class="key scientific-key" data-action="ln">ln</button>
+                <button class="key scientific-key" data-action="sqrt">√</button>
+                <button class="key scientific-key" data-action="power">x²</button>
+                <button class="key scientific-key" data-action="reciprocal">1/x</button>
+
+                <!-- Row 5: Numbers and Basic Operations -->
+                <button class="key number-key" data-value="7">7</button>
+                <button class="key number-key" data-value="8">8</button>
+                <button class="key number-key" data-value="9">9</button>
+                <button class="key operator-key" data-action="divide">÷</button>
+
+                <!-- Row 6: More Numbers -->
+                <button class="key number-key" data-value="4">4</button>
+                <button class="key number-key" data-value="5">5</button>
+                <button class="key number-key" data-value="6">6</button>
+                <button class="key operator-key" data-action="multiply">×</button>
+
+                <!-- Row 7: More Numbers -->
+                <button class="key number-key" data-value="1">1</button>
+                <button class="key number-key" data-value="2">2</button>
+                <button class="key number-key" data-value="3">3</button>
+                <button class="key operator-key" data-action="subtract">−</button>
+
+                <!-- Row 8: Zero and Decimal -->
+                <button class="key number-key" data-value="0">0</button>
+                <button class="key decimal-key" data-action="decimal">.</button>
+                <button class="key equals-key" data-action="equals">=</button>
+                <button class="key operator-key" data-action="add">+</button>
+
+                <!-- Row 9: Additional Functions -->
+                <button class="key scientific-key" data-action="factorial">x!</button>
+                <button class="key scientific-key" data-action="abs">|x|</button>
+                <button class="key scientific-key" data-action="exp">EXP</button>
+                <button class="key scientific-key" data-action="pi">π</button>
+
+                <!-- Row 10: More Advanced Functions -->
+                <button class="key scientific-key" data-action="e">e</button>
+                <button class="key scientific-key" data-action="rand">RND</button>
+                <button class="key scientific-key" data-action="mod">mod</button>
+                <button class="key scientific-key" data-action="gcd">GCD</button>
+            </div>
+
+            <!-- Mode Selection Panel -->
+            <div class="mode-panel" id="modePanel">
+                <div class="mode-options">
+                    <button class="mode-option" data-mode="calculation">Calculation</button>
+                    <button class="mode-option" data-mode="statistics">Statistics</button>
+                    <button class="mode-option" data-mode="complex">Complex</button>
+                    <button class="mode-option" data-mode="matrix">Matrix</button>
+                    <button class="mode-option" data-mode="vector">Vector</button>
+                    <button class="mode-option" data-mode="equation">Equation</button>
+                    <button class="mode-option" data-mode="inequality">Inequality</button>
+                    <button class="mode-option" data-mode="ratio">Ratio</button>
+                </div>
+            </div>
+
+            <!-- Statistics Panel -->
+            <div class="stats-panel" id="statsPanel">
+                <div class="stats-input">
+                    <input type="number" id="statsInput" placeholder="Enter data point">
+                    <button id="addData">Add</button>
+                </div>
+                <div class="stats-results">
+                    <div>n: <span id="count">0</span></div>
+                    <div>Σx: <span id="sum">0</span></div>
+                    <div>Σx²: <span id="sumSquares">0</span></div>
+                    <div>x̄: <span id="mean">0</span></div>
+                    <div>σx: <span id="stdDev">0</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="calculator.js"></script>
+</body>
+</html> 
